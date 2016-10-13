@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Demo Gif </title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Gipfy - wyszukiwarka"/>
+    <meta name="idk" content="test" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+<center><div id="main">
+    
+<!-- HEADER -->
+    <div id="header">
+        <h1>
+        <center>GIPHY</center>
+        </h1>
+    </div>
+<!-- /HEADER -->
+    
+<!-- SEARCH BAR -->
+    <input type="search" id="search">
+    <input type="submit" value="Wyszukaj" id="btn">
+    <br>
+    <video id="gif" autoplay="true" loop="true"></video>
+    <script src="./giphy.js"></script>
+    <script>
+        
+        document.getElementById('btn').addEventListener('click',function(){
+            
+            
+            var keyword = document.getElementById('search').value;
+            
+            Giphy.getUrlAsync(keyword,function(videoURL){
+                document.getElementById('gif').src = videoURL;
+            })
+            
+        });
+        
+    </script>
+<!-- /SEARCH BAR -->
+    
+    
+<!-- LIKE -->
+<div>
+    <input type="button" class='like' value="Like" >
+    <input type="button" class='dislike' value="Dislike">
+</div>
+<!-- /LIKE --> 
+    
+    
+</div></center>
+</body>
+</html>
