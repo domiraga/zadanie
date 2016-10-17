@@ -39,12 +39,27 @@
         
     </script>
 <!-- /SEARCH BAR -->
-    
-    
+
 <!-- LIKE -->
 <div>
-    <input type="button" class='like' value="Like" >
-    <input type="button" class='dislike' value="Dislike">
+    <input type="button" id='like'  value="Like" onclick="like()">
+    <input type="button" id='dislike'  value="Dislike" onclick="dislike()">
+
+    
+    <script>
+    var likes = 0; dislikes = 0;
+    function like(){
+        likes=likes+1;
+        document.getElementById("show").innerHTML=likes;
+    }
+    function dislike(){
+        dislikes=dislikes-1;
+        document.getElementById("show1").innerHTML=dislikes;
+    }
+    </script>
+
+<p type="text" id="show"></p>
+<p type="text" id="show1"></p>
 </div>
 <!-- /LIKE --> 
     
