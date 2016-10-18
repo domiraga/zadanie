@@ -16,6 +16,11 @@ body {
 }
 
 #logo {
-  width: 10%;
-  display:block;
+    width: 10%;
+    display:block;
+}
+
+p {
+    display: inline-block;
+    margin: 15px!important;
 }
