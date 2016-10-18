@@ -24,3 +24,8 @@ p {
     display: inline-block;
     margin: 15px!important;
 }
+
+video {
+    width: 45%;
+    height: auto;
+}
